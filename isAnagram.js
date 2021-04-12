@@ -53,7 +53,7 @@ function isAnagram(s, t) {
     }
 
     for (let char of t) {
-        countArr[char.charCodeAt(0) - 97] += 1;
+        countArr[char.charCodeAt(0) - 97] -= 1;
     }
 
     return countArr.every(element => element === 0)

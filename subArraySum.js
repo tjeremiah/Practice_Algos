@@ -14,7 +14,7 @@ function subArraySum(arr, k) {
          count += 1;
       }
 
-      if((sum - k) in cache) {
+      if((sum - k) in cache) {  //if the difference is in the cache then increase our count
           count += cache[sum -k];
       }
 
@@ -36,7 +36,7 @@ function subArraySum(arr, k) {
     let sum = 0,
      count = 0;
      map = new Map();
-     map.set(0, 1)
+     map.set(0, 1) //initially set a key in our map to 0:1
      for (let i = 0; i < arr.length; i++) {
          sum += arr[i];
 
