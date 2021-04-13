@@ -36,7 +36,7 @@ const function lengthOfLongestSubstring(str) {
      maxLength = 0;
 
      while (end < str.length) {
-        let charValue = s.charCodeAt(start);
+        let charValue = str.charCodeAt(start);
          
         let index = charsArray[charValue];
 
