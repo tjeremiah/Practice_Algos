@@ -26,7 +26,7 @@ var firstUniqChar = function(s) {
  console.log(firstUniqChar("loveleetcode"))
  console.log(firstUniqChar("aabb"))
 
-//Optimal Solution
+//Optimal Solution using an Array and charCodeAt()
 
 const firstUniqChar = function(s) {
 
