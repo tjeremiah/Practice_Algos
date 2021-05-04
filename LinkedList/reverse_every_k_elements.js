@@ -5,7 +5,7 @@ function reverse_every_k_elements(head, k) {
 
     while(true) {
         first_part_previous = previous; //keeping track of the previous node of the 1st part
-        sub_list_part = current; // keeping track of the current node of in the sub_list
+        sub_list_part = current; // keeping track of the current node  in the sub_list
         next = null;  //temp storage for current
         i = 0;
 
@@ -23,6 +23,7 @@ function reverse_every_k_elements(head, k) {
         else {
             head = previous;
         }
+        //connect to the next part
         sub_list_part.next = current
 
         if (current === null) {
