@@ -30,7 +30,7 @@ function subArraySum(arr, k) {
 }
 console.log(subArraySum([3,4,7,2,-3,1,4,2], 7));
 
-//Optimal solution
+//Optimal solution()
 
 function subArraySum(arr, k) {
     let sum = 0,
