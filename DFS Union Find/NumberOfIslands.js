@@ -24,11 +24,11 @@ const numIslands = function(grid) {
             dfs(grid, row_x -1, col_y) 
         }
         // check the row below (vertical)
-        if (row_x + 1 >= 0 && grid[row_x + 1][col_y] === '1') {
+        if (row_x + 1 < row_length && grid[row_x + 1][col_y] === '1') {
             dfs(grid, row_x + 1, col_y)
         }
         // check column on the right (horizontal)
-        if (col_y + 1 >= 0 && grid[row_x][col_y + 1] === '1') {
+        if (col_y + 1 < col_length && grid[row_x][col_y + 1] === '1') {
             dfs(grid, row_x, col_y + 1)
         }
         // check column on the left (horizontal)
