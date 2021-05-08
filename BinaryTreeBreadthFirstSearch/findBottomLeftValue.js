@@ -16,7 +16,7 @@ const findBottomLeftValue = function(root) {
             level.push(currentNode.right)
         }
 
-        if (queue.length < 0 && level.length > 0) {
+        if (queue.length === 0 && level.length > 0) {
             queue = level;
             leftmost = level[0];  //first node on that level
             level = []; //set level back to empty for the next level;
