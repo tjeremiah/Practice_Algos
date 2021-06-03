@@ -41,7 +41,7 @@ var isAnagram = function(s, t) {
 
 function isAnagram(s, t) {
 
-    const countArr = new Array(26).fill(0) //allocating space for the 26 chars of the alphabet
+    const countArr = new Array(26).fill(0) //allocating space for the 26 chars of the alphabet and fill them with 0s
 
     if (s.length != t.length) {
         return false
@@ -53,7 +53,7 @@ function isAnagram(s, t) {
     }
 
     for (let char of t) {
-        countArr[char.charCodeAt(0) - 97] -= 1;
+        countArr[char.charCodeAt(0) - 97] -= 1;  //use the second string to check to see if it's char exist in the array
     }
 
     return countArr.every(element => element === 0)
