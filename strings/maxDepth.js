@@ -19,3 +19,4 @@ const maxDepth = str => {
 }
 
 console.log(maxDepth("(1+(2*3)+((8)/4))+1"))
+
