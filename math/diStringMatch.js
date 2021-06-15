@@ -33,6 +33,9 @@
 //most Optimized 
 // Time complexity : O(n)
 // Space Complexity: O(n)
+
+// A permutation perm of n + 1 integers of all the integers in the range [0, n] can be 
+// represented as a string s of length n where:
 const diStringMatch = s => {
     let result = [];
     let I = 0;
