@@ -30,3 +30,6 @@ const fizzbuzz = n => {
 }
 
 console.log(fizzbuzz(15))
+
+// Time complexity = O(N)
+// Space Complexity = O(N)
