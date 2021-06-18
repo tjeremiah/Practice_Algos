@@ -41,3 +41,16 @@ head.next = new Node(0);
 head.next.next = new Node(1);
 
 console.log(getDecimalValue(head));
+
+
+// Another method
+
+const getDecimalValue = (head) => {
+    let num = head.val;
+     
+    while(head.next) {
+        num = num * 2 + head.next.val;
+        head = head.next;
+    }
+    return num;
+}
