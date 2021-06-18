@@ -4,7 +4,7 @@
 const defangIPaddr = str => {
     let new_address = "";
      for (let i of address) {
-         new_address += (i === ".") ? '[.]' : i)
+         new_address += ((i === ".") ? '[.]' : i)
 
      }
      return new_address
