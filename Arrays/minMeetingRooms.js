@@ -20,6 +20,5 @@ const minMeetingRoom = (intervals) => {
 
      }
      return count;
-
 }
 console.log(minMeetingRoom([[0,30],[5,10],[15,20]]))
