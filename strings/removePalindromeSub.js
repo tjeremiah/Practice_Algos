@@ -11,24 +11,23 @@
 // Explanation: "baabb" -> "b" -> "". 
 // Remove palindromic subsequence "baab" then "b".
 
-// var removePalindromeSub = (s) => {
-//     let start = 0;
-//     let end = s.length -1;
+var removePalindromeSub = (s) => {
+    let start = 0;
+    let end = s.length -1;
 
-//     for(let i = 0; i < s.length; i++) {
-//         if(s[start] !== s[end]) {
-//             return 2;
-//         }
-//         start += 1;
-//         end -= 1;
-//     }
-//     return 1;
-//}
+    for(let i = 0; i < s.length; i++) {
+        if(s[start] !== s[end]) {
+            return 2;
+        }
+        start += 1;
+        end -= 1;
+    }
+    return 1;
+}
 
 //Most Optimized
 
 var removePalindromeSub = (s) => {
     return s.length ===0 ? 0 : s.split('').reverse().join('') === s ? 1 : 2
 }
-
 console.log(removePalindromeSub("baabb"))
