@@ -4,7 +4,7 @@
 // this is possible, keep answer[i] == 0 
 // instead.
 
-const dailyTemperature = (temperature) => {
+const dailyTemperatures = (temperature) => {
     let length = temperature.length -1
     let stack = [];
 
@@ -24,3 +24,4 @@ const dailyTemperature = (temperature) => {
     }
     return temperature;
 }
+console.log(dailyTemperatures([73,74,75,71,69,72,76,73]))
