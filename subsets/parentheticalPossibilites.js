@@ -5,40 +5,39 @@
 
 // For example, the possibilities for 'x(mn)yz' are 'xmyz', 'xnyz'.
 
-const parentheticalPos = (s) => {
+const parentheticalPos = (s) => { //'x(mn)yz','(mn)yz', 'yz', 'z', ""
     // base case
-    if (s.length === 0) return [''];
+    if (s.length === 0) return ['']; 
 
-    let allPos = [];
-    const { choices, remainder } = getChoices(s)
-    for (let choice of choices ) {
-        const remainderPos = parentheticalPos(remainder);
+    let allPos = [];                    //'x(mn)yz','(mn)yz', 'yz' , 'z'
+    const { choices, remainder } = getChoices(s) //{[x],[(mn)yz]}, {['m','n'], 'yz'}, {[y], 'z'}
+    for (let choice of choices ) { //[x], ['m', 'n'] , ['y'], ['z']
+        const remainderPos = parentheticalPos(remainder); //'(mn)yz','yz','z', ""
         for (let subString of remainderPos) {
             allPos.push(choice + subString)
         }
-
     }
-    return allPos;
+    return allPos; 
 }
 
-const getChoices = (s) => {
-    if (s[0] === '(') {
-        let end = s.indexOf(')')
-        let choices = s.slice(1, end)
-        let remainder = s.slice(end + 1)
+const getChoices = (s) => { //x(mn)yz, (mn)yz, 'yz', 'z'
+    if (s[0] === '(') { 
+        let end = s.indexOf(')') // 3
+        let choices = s.slice(1, end).split("") // ['m','n']
+        let remainder = s.slice(end + 1) //'yz'
         return {
-            choices,
-            remainder
+            choices, //['m', 'n']
+            remainder, // 'yz' 
         }
     }
     else {
-        let choices = [s[0]];
-        let remainder = s.slice(1);
+        let choices = [s[0]]; //[x], [y], [z]
+        let remainder = s.slice(1); // '(mn)yz', 'z', ""
         return {
-            choices,
-            remainder
+            choices, //['x'], [y], [z]
+            remainder, // '(mn)yz', 'z', ""
         }
     }
 }
 
-console.log(parentheticalPos('x(mn)yz'))
+console.log(parentheticalPos('x(m)yz'))

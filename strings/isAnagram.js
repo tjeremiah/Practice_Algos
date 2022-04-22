@@ -43,11 +43,11 @@ function isAnagram(s, t) {
 
     const countArr = new Array(26).fill(0) //allocating space for the 26 chars of the alphabet and fill them with 0s
 
-    if (s.length != t.length) {
+    if (s.length !== t.length) {
         return false
     }
-    
-    for (let char of s) {
+    //"aabbbc"
+    for (let char of s) { //'a', 'a'
         //take the string'char' return the unicode of the firstchar and subtract from 97 - this is the index, then increment by 1
         countArr[char.charCodeAt(0) - 97] +=1;
     }
